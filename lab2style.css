@@ -1,0 +1,35 @@
+h1 {
+    color: red;
+    font-size: 48px;
+}
+
+#photo {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+table, td {
+    border: 1px solid grey;
+}
+
+.attribute {
+    font-weight: bold;
+}
+
+#website-link {
+    text-align: center;
+}
+
+#table-space {
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+#table-title {
+    font-weight: bold;
+    padding-bottom: 6px;
+}
+
+#page-info {
+    color: grey;
+}
