@@ -1,16 +1,3 @@
-//var fs = require('fs');
-//var http = require('http');
-
-/*
-console.log('running the script...');
-
-function intervalFunc() {
-    console.log('new interval');
-}
-
-setInterval(intervalFunc, 5000);
-*/
-
 const image_files = [
     "shuttle1.html",
     "shuttle2.html",
@@ -37,5 +24,5 @@ $(document).ready(function(){
         }
     }
 
-    setInterval(intervalFunc, 5000);
+    setInterval(intervalFunc, 20000);
 });
