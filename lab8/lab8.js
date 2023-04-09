@@ -64,7 +64,7 @@ app.get('/bookinventory/add/:title/:author/:publisher/:date/:website', function(
 
 /*`mongodb+srv://${username}:${password}@cluster0.3axaotl.mongodb.net/?retryWrites=true&w=majority?directConnection=true`;*/
 
-let uri = `mongodb+srv://clacoursiere:BQwQG6xQNAEwDPS1@cluster0.3axaotl.mongodb.net/?retryWrites=true&w=majority?directConnection=true`;
+let uri = "mongodb+srv://clacoursiere:BQwQG6xQNAEwDPS1@cluster0.3axaotl.mongodb.net/?retryWrites=true";
  
 const client = new MongoClient(uri);
 
@@ -76,9 +76,10 @@ async function run() {
         database.collection("bookinventory").insertMany(book_list, function(err, res) {
             if (err) throw err;
             console.log("Number of documents inserted: " + res.insertedCount);
+            client.close();
         });
-    } finally {
-        await client.close();
+    } catch (e) {
+        console.log(e);
     }
 }
 run().catch(console.dir);
